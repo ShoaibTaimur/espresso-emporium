@@ -4,13 +4,16 @@ const AddCoffee = () => {
 
     const handleSubmit=e=>{
         e.preventDefault();
-        const name=e.target.name.value;
-        const supplier=e.target.supplier.value;
-        const category=e.target.category.value;
-        const chef=e.target.chef.value;
-        const taste=e.target.taste.value;
-        const details=e.target.details.value;
-        const photo=e.target.photo.value;
+        // const name=e.target.name.value;
+        // const supplier=e.target.supplier.value;
+        // const category=e.target.category.value;
+        // const chef=e.target.chef.value;
+        // const taste=e.target.taste.value;
+        // const details=e.target.details.value;
+        // const photo=e.target.photo.value;
+        const form=e.target;
+        const formData=new FormData(form);
+        const coffeeData=Object.fromEntries(formData.entries());
     }
 
 
@@ -38,8 +41,8 @@ const AddCoffee = () => {
                         <input name='category' type="text" className="input border-none w-full" placeholder="Enter coffee category" />
                     </div>
                     <div className='flex flex-col gap-3'>
-                        <label className="label font-semibold">Chef</label>
-                        <input name='chef' type="text" className="input border-none w-full" placeholder="Enter coffee chef" />
+                        <label className="label font-semibold">Quantity</label>
+                        <input name='quantity' type="text" className="input border-none w-full" placeholder="Enter coffee quantity" />
 
                         <label className="label font-semibold">Taste</label>
                         <input name='taste' type="text" className="input border-none w-full" placeholder="Enter coffee taste" />
