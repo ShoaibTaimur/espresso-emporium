@@ -7,6 +7,8 @@ import MainLayout from './components/layouts/MainLayout'
 import Home from './components/Home'
 import UpdateCoffee from './components/UpdateCoffee'
 import AddCoffee from './components/AddCoffee'
+import CoffeeDetails from './components/CoffeeDetails'
+import ErrorPage from './components/ErrorPage'
 
 const router = createBrowserRouter([
   { path: '/', 
@@ -21,7 +23,15 @@ const router = createBrowserRouter([
         Component: AddCoffee
       },
       {
-        path:"updateCoffee",
+        path:"coffees/:id",
+        Component:CoffeeDetails,
+      },
+      {
+        path:"/error",
+        Component:ErrorPage
+      },
+      {
+        path:"updateCoffee/:id",
         Component: UpdateCoffee
       }
     ]

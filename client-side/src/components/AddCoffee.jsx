@@ -1,4 +1,6 @@
+import { StepBack } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router';
 import Swal from "sweetalert2";
 
 const AddCoffee = () => {
@@ -53,6 +55,7 @@ const AddCoffee = () => {
     return (
         <div>
             <div className='max-w-7xl mx-auto'>
+                <Link to="/" className='flex absolute items-center gap-2 mb-5 rancho text-[20px] md:text-[30px]'><StepBack />Back to Home</Link>
                 <div className='px-3 sm:px-15 lg:px-28 py-17.5 bg-[#F4F3F0] space-y-5'>
                     <div className='flex flex-col items-center gap-5'>
                         <h1 className="rancho text-[26px] md:text-[35px] text-shadow-xl font-normal text-[#374151]">
