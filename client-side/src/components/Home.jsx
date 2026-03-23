@@ -31,7 +31,7 @@ const Home = () => {
                 </div>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
                     {
-                        coffeeData.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>)
+                        coffeeData.map(coffee => <CoffeeCard coffeeData={coffeeData} setCoffeeData={setCoffeeData}  key={coffee._id} coffee={coffee}></CoffeeCard>)
                     }
                 </div>
 

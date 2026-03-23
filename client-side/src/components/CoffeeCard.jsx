@@ -3,7 +3,7 @@ import { Eye, Pen, Trash } from 'lucide-react';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router';
 
-const CoffeeCard = ({ coffee }) => {
+const CoffeeCard = ({ coffee, setCoffeeData, coffeeData }) => {
     const { photo, name, supplier, price, _id } = coffee;
     const handleDelete = (id) => {
         Swal.fire({
@@ -27,6 +27,9 @@ const CoffeeCard = ({ coffee }) => {
                                 text: "Your Coffee has been deleted.",
                                 icon: "success"
                             });
+
+                            const remain=coffeeData.filter(coffee=>coffee._id!==_id);
+                            setCoffeeData(remain);
                         }
                     })
 
