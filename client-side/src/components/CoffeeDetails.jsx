@@ -12,7 +12,7 @@ const CoffeeDetails = () => {
     useEffect(() => {
         const loadData = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/coffees/${id}`);
+                const res = await fetch(`https://espresso-server.shoaaib.site/coffees/${id}`);
                 const data = await res.json();
                 setCoffeeData(data);
             }

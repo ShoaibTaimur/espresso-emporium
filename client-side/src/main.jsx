@@ -13,6 +13,7 @@ import Signup from './components/Signup'
 import Signin from './components/Signin'
 import { AuthContext } from './Context/AuthContext'
 import AuthProvider from './Context/AuthProvider'
+import Users from './components/Users'
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "signin",
         Component: Signin
+      },
+      {
+        path:"users",
+        Component: Users
       }
     ]
   },

@@ -21,7 +21,7 @@ const AddCoffee = () => {
         if (newCoffee.name != "" && newCoffee.supplier != "" && newCoffee.category != "" && newCoffee.quantity != "" && newCoffee.taste != "" && newCoffee.details != "" && newCoffee.photo != "" && newCoffee.price != "") {
             console.log(newCoffee);
 
-            fetch("http://localhost:3000/coffees", {
+            fetch("https://espresso-server.shoaaib.site/coffees", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"

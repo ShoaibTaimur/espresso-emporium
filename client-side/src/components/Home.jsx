@@ -10,7 +10,7 @@ const Home = () => {
 
     useEffect(() => {
         const loadCoffeeData = async () => {
-            const res = await fetch("http://localhost:3000/coffees");
+            const res = await fetch("https://espresso-server.shoaaib.site/coffees");
             const data = await res.json();
             setCoffeeData(data);
         }

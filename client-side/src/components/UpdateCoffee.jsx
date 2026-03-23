@@ -14,7 +14,7 @@ const UpdateCoffee = () => {
     useEffect(() => {
         const loadData = async () => {
             try {
-                const res = await fetch(`http://localhost:3000/coffees/${id}`);
+                const res = await fetch(`https://espresso-server.shoaaib.site/coffees/${id}`);
                 const data = await res.json();
                 setCoffeeData(data);
             } catch (error) {
@@ -32,7 +32,7 @@ const UpdateCoffee = () => {
         const formData = new FormData(form);
         const updateCoffee = Object.fromEntries(formData.entries());
 
-        fetch(`http://localhost:3000/coffees/${_id}`, {
+        fetch(`https://espresso-server.shoaaib.site/coffees/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

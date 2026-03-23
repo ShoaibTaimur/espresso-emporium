@@ -11,13 +11,17 @@ const Signup = () => {
         const form = e.target;
         const formData = new FormData(form);
 
-        const { email, password, ...userProfile } = Object.fromEntries(formData.entries());
+        const { email, password, ...rest } = Object.fromEntries(formData.entries());
+        const userProfile={
+            email,
+            ...rest
+        }
 
         // const email=formData.get("email");
         // const password=formData.get("password");
         createUser(email, password)
             .then(result => {
-                fetch("http://localhost:3000/users", {
+                fetch("https://espresso-server.shoaaib.site/users", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"
